@@ -1,10 +1,8 @@
 import java.util.Scanner;
 
- 
 
 public class vectores {
 
- 
 
    public static void main(String[] args) {
 
@@ -16,7 +14,7 @@ public class vectores {
 
       encontrado = false;
 
-      int tamano, opcion, elemento, contador,patata;
+      int tamanyo, opcion, elemento, contador,patata;
 
       int [] mivector;
 
@@ -28,9 +26,9 @@ public class vectores {
 
       opcion=12;
 
-      System.out.println("indique el tamano");
+      System.out.println("indique el tamaño:");
 
-      tamano = Integer.parseInt(in.next());
+      tamanyo = Integer.parseInt(in.next());
 
       
 
@@ -48,7 +46,7 @@ public class vectores {
 
            if (opcion==1){
 
-               for (int i = 0;i < tamano;i++){
+               for (int i = 0;i < tamanyo;i++){
 
                   System.out.print("introduzca valor para el índice["+i+"]: ");
 
@@ -64,7 +62,7 @@ public class vectores {
 
            if (opcion==2){
 
-               for (int i = 0;i < tamano; i++){
+               for (int i = 0;i < tamanyo; i++){
 
                    System.out.print(mivector[i]+",");
 
@@ -78,11 +76,11 @@ public class vectores {
 
          if (opcion==3) {
 
-           tamano++;
+           tamanyo++;
 
            System.out.println("insertar elemento");
 
-           mivector[tamano-1]=Integer.parseInt(in.next());
+           mivector[tamanyo-1]=Integer.parseInt(in.next());
 
            System.out.println("Elemento insertado");
 
@@ -99,7 +97,7 @@ public class vectores {
 
              }
 
-             tamano=0;
+             tamanyo=0;
 
              System.out.println("El vector se ha borrado.");
 
@@ -109,7 +107,7 @@ public class vectores {
 
          if (opcion==5) {
 
-             if (tamano==0) {
+             if (tamanyo==0) {
 
                  System.out.println("El vector esta vacio");
 
@@ -131,7 +129,7 @@ public class vectores {
 
              contador=0;
 
-             while (!(encontrado) & (contador <tamano)){
+             while (!(encontrado) & (contador <tamanyo)){
 
                   if (mivector[contador]==elemento){
 
@@ -161,7 +159,7 @@ public class vectores {
 
              System.out.println("ordenacion en burbuja");
 
-             if (tamano<2){
+             if (tamanyo<2){
 
                  System.out.println("vector ordenado");
 
@@ -169,9 +167,9 @@ public class vectores {
 
              else{
 
-                 for (int i=0;i<tamano-1;i++){
+                 for (int i=0;i<tamanyo-1;i++){
 
-                    for  (int j=0;j<tamano-1;j++){
+                    for  (int j=0;j<tamanyo-1;j++){
 
                          if (mivector[j]>mivector [j+1]){
 
@@ -186,7 +184,7 @@ public class vectores {
                     }
 
                 }
-                for(int i = 0;i < tamano; i++)
+                for(int i = 0;i < tamanyo; i++)
                 {
                     System.out.print(mivector[i]+"\n");
                 }
@@ -206,7 +204,7 @@ public class vectores {
 
              contador=0;
              encontrado=false;
-             while (!(encontrado) & (contador <tamano)){
+             while (!(encontrado) & (contador <tamanyo)){
 
                   if (mivector[contador]==elemento){
 
@@ -259,21 +257,4 @@ public class vectores {
               System.out.println("10:Salir");
 
            }    
-
-         private static void borrarVectorEntero() {
-
-            
-
- 
-
-         }
-
-         private static void borrarVector(int talla) {
-
-             talla=0;
-
-           }      
-
-      
-
-   }
+ }
